@@ -1,3 +1,20 @@
-body {
-  background-color: bisque;
+.flex {
+  display: flex;
 }
+
+.w-97 {
+  width: 97%;
+}
+
+.w-40 {
+  width: 40%;
+}
+
+.w-37 {
+  width: 37%;
+}
+
+.f-right {
+  float: right;
+}
+
