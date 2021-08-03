@@ -13,7 +13,7 @@
 
 ## Live Demo
 
-We are currently building and this does not yet apply!
+We are currently building, but you are more than welcome to see our progress [here](https://focused-leavitt-f1ea1d.netlify.app/)
 
 ### Setup
 
