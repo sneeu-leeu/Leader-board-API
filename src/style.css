@@ -32,9 +32,8 @@
   margin-left: 1rem;
 }
 
-.content-sa { 
+.content-sa {
   justify-content: space-around;
-  /* align-items: center; */
 }
 
 h1 {
@@ -48,6 +47,3 @@ h2 {
 .refresh {
   height: 1.6em;
 }
-
-
-
