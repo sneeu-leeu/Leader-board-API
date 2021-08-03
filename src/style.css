@@ -18,3 +18,36 @@
   float: right;
 }
 
+.m-bot-1 {
+  margin-bottom: 2rem;
+}
+
+.m-left {
+  margin-left: 1.5rem;
+}
+
+.aic-start {
+  align-items: center;
+  justify-content: start;
+  margin-left: 1rem;
+}
+
+.content-sa { 
+  justify-content: space-around;
+  /* align-items: center; */
+}
+
+h1 {
+  font-size: 2.6rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+.refresh {
+  height: 1.6em;
+}
+
+
+
