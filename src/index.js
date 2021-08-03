@@ -5,7 +5,7 @@ import './style.css';
 
 const logBoard = [];
 
-function render() {
+const render = () => {
   const leaderBoard = document.getElementById('JS-score-log');
   leaderBoard.innerHTML = '';
   const sortedTask = logBoard.sort((a, b) => a.index - b.index);
@@ -19,6 +19,6 @@ function render() {
     textElem.append(score.player, score.hScore);
     listItem.append(textElem);
   });
-}
+};
 
 document.addEventListener('DOMContentLoaded', render);
