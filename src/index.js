@@ -1,13 +1,9 @@
+// eslint-disable-next-line no-unused-vars
 import _ from 'lodash';
 import './reset.css';
 import './style.css';
 
-let logBoard = [{
-  player: "player1",
-  score: 42069,
-  id: 1
-}
-];
+const logBoard = [];
 
 function render() {
   const leaderBoard = document.getElementById('JS-score-log');
@@ -20,6 +16,7 @@ function render() {
     listItem.classList.add('flex', 'aic-start');
     const textElem = document.createElement('p');
     textElem.classList.add('flex', 'aic-start');
+    textElem.append(score.player, score.hScore);
     listItem.append(textElem);
   });
 }
