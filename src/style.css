@@ -1,3 +1,10 @@
+
+li {
+  border: 1px solid black;
+  margin-bottom: 5px;
+  padding: 3px;
+}
+
 .flex {
   display: flex;
 }
@@ -30,8 +37,20 @@
   margin-bottom: 2rem;
 }
 
+.m-top-1 {
+  margin-top: 1rem;
+}
+
+.center {
+  align-self: center;
+}
+
 .m-left {
   margin-left: 1.5rem;
+}
+
+.log-board {
+  border: 1px solid black;
 }
 
 .aic-start {

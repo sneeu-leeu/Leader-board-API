@@ -4,7 +4,7 @@ import './reset.css';
 import './style.css';
 import { addGame, refresh, submit } from './api.js';
 
-const newElem = (elem) => document.createElement(elem);  
+const newElem = (elem) => document.createElement(elem);
 const newDiv = () => document.createElement('div');
 
 const render = () => {
@@ -15,6 +15,7 @@ const render = () => {
 
   const title = newElem('h1');
   title.innerText = 'Leader Board';
+  title.classList.add('center', 'm-bot-1');
 
   const divMain = newDiv();
   divMain.classList.add('content-sa', 'flex');
@@ -23,7 +24,7 @@ const render = () => {
   divLeft.classList.add('score-log', 'w-40');
 
   const logTitle = newDiv();
-  logTitle.classList.add('flex', 'content-sa');
+  logTitle.classList.add('flex', 'content-sa', 'm-bot-1');
 
   const subHead = newElem('h2');
   subHead.innerText = 'Recent Scores';
@@ -35,7 +36,7 @@ const render = () => {
 
   const list = newElem('ul');
   list.id = 'JS-score-log';
-  list.classList.add('log-board', 'list-style');
+  list.classList.add('log-board', 'border', 'list-style', 'm-left');
 
   const rightDiv = newDiv();
   rightDiv.classList.add('input-field', 'w-37');
@@ -74,8 +75,8 @@ const render = () => {
 
   addGame();
   refresh();
-  document.getElementById('refresh-but').addEventListener('click', refresh);
   document.getElementById('submit-but').addEventListener('click', submit);
+  document.getElementById('refresh-but').addEventListener('click', refresh);
 };
 
 document.addEventListener('DOMContentLoaded', render);

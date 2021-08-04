@@ -1,13 +1,13 @@
-const apiUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
+const baseUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
 
 const addGame = async () => {
   if (localStorage.getItem('gameId'));
 
   const newGame = {
-    name: 'Footie with the boys',
+    name: 'Great Game',
   };
 
-  const response = await fetch(`${apiUrl}games/`, {
+  const response = await fetch(`${baseUrl}games/`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -23,12 +23,12 @@ const refresh = async () => {
   const gameId = localStorage.getItem('gameId');
   const list = document.getElementById('JS-score-log');
   list.innerHTML = '';
-  const response = await fetch(`${apiUrl}games/${gameId}/scores`);
+  const response = await fetch(`${baseUrl}games/${gameId}/scores`);
   const scores = await response.json();
   scores.result.forEach((score) => {
     const listItem = document.createElement('li');
     listItem.innerText = `${score.user}: ${score.score}`;
-    listItem.append(list);
+    list.appendChild(listItem);
   });
 };
 
@@ -44,7 +44,7 @@ const submit = async (e) => {
     score: playerScore.value,
   };
 
-  await fetch(`${apiUrl}games/${gameId}/scores`, {
+  await fetch(`${baseUrl}games/${gameId}/scores`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
