@@ -2,13 +2,14 @@
 import _ from 'lodash';
 import './reset.css';
 import './style.css';
-import { newGame, refresh, submit } from './api.js';
+import { addGame, refresh, submit } from './api.js';
+
+const newElem = (elem) => document.createElement(elem);  
 
 const render = () => {
-  newGame();
-  refresh();
-  document.getElementById('refresh').addEventListener('click', refresh);
-  document.getElementById('submit').addEventListener('click', submit);
-};
 
-document.addEventListener('DOMContentLoaded', render);
+  const anchor = document.getElementById('anchor');
+
+  const main = newElem('main');
+  main.classList.add('content-sa', 'flex', 'flex-col');
+  

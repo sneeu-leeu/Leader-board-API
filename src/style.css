@@ -2,6 +2,10 @@
   display: flex;
 }
 
+.flex-col {
+  flex-direction: column;
+}
+
 .w-97 {
   width: 97%;
 }
