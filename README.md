@@ -16,18 +16,20 @@
 
 ## Live Demo
 
-We are currently building, but you are more than welcome to see our progress [here](https://elated-mcclintock-6cffff.netlify.app/)
+[Live Demo](https://amazing-poitras-552555.netlify.app/)
 
 ### Setup
 
 To get a local copy up and running follow these simple example steps.
 
-Click [here](https://github.com/sneeu-leeu/Leader-board-API)to go to the repo and clone the project by opening your terminal and entering "git clone" + "The link supplied".
+Click [here](https://github.com/sneeu-leeu/Leader-board-API) to go to the repo and clone the project by opening your terminal and entering "git clone" + "The link supplied".
 
 cd into the repo by typing
 $ cd ./your-path/Leader-board-API
 
-run ' $ npm install '
+$ git checkout style
+
+$ npm install
 
 Open the repo in your code editor and launch it by running '$ npm start' !
 
