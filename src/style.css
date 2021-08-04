@@ -1,5 +1,5 @@
 
-li {
+.score-log li {
   border: 1px solid black;
   margin-bottom: 5px;
   padding: 3px;
@@ -11,12 +11,15 @@ body {
 
 h1 {
   font-size: 2.6rem;
-  color: darkblue;
 }
 
 h2 {
   font-size: 2rem;
-  color: darkblue;
+}
+
+i {
+  font-size: 1.3rem;
+  padding: 5px;
 }
 
 .txt-db {
@@ -28,7 +31,7 @@ h2 {
 }
 
 .vh-10 {
-  height: 10vh;
+  height: 20vh;
 }
 
 .pad-top {
@@ -55,16 +58,27 @@ h2 {
   width: 40%;
 }
 
+.w-50 {
+  width: 50%;
+}
+
+.w-37 {
+  width: 37%;
+}
+
+.border100{
+  border: 1px solid black;
+  border-radius: 100%;
+  background-color:rgb(91, 208, 255);
+  padding: 4px;
+}
+
 .bg-orange {
   background-color: rgb(108, 255, 64);
 }
 
 .bg-green {
   background-color: rgb(255, 145, 0);
-}
-
-.w-37 {
-  width: 37%;
 }
 
 .f-right {
@@ -109,4 +123,8 @@ h2 {
 .center {
   justify-content: center;
   align-items: center;
+}
+
+footer li {
+
 }

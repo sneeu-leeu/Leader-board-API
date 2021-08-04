@@ -9,7 +9,7 @@ const newDiv = () => document.createElement('div');
 
 const render = () => {
   const anchor = document.getElementById('anchor');
-  
+
   const main = newElem('main');
   main.classList.add('content-sa', 'flex', 'flex-col');
 
@@ -37,7 +37,7 @@ const render = () => {
 
   const list = newElem('ul');
   list.id = 'JS-score-log';
-  list.classList.add('log-board', 'pad-top', 'border', 'list-style', 'm-left', 'bg-green');
+  list.classList.add('m-bot-1', 'log-board', 'pad-top', 'border', 'list-style', 'm-left', 'bg-green');
 
   const rightDiv = newDiv();
   rightDiv.classList.add('input-field', 'w-37');
@@ -72,19 +72,35 @@ const render = () => {
   divLeft.append(logTitle, list);
   divMain.append(divLeft, rightDiv);
   main.append(title, divMain);
-  anchor.append(main);
 
-  const anchorFoot = document.getElementById('anchor-foot');
-  anchorFoot.classList.add('flex', 'center', 'vh-10');
+  const anchorFoot = newElem('footer');
+  anchorFoot.classList.add('flex', 'center', 'vh-10', 'bg-db');
 
   const footUl = newElem('ul');
-  footUl.classList.add('flex', 'justify-content: space-around;');
+  footUl.classList.add('m-top-1', 'flex', 'w-50', 'content-sa');
 
   const liFoot1 = newElem('li');
-  liFoot1.classList.add('');
+  liFoot1.classList.add('border100');
+  const iFoot1 = newElem('i');
+  iFoot1.classList.add('fab', 'fa-discord');
+  liFoot1.append(iFoot1);
 
-  footUl.append();
-  anchorFoot.append();
+  const liFoot2 = newElem('li');
+  liFoot2.classList.add('border100');
+  const iFoot2 = newElem('i');
+  iFoot2.classList.add('fas', 'fa-share-alt');
+  liFoot2.append(iFoot2);
+
+  const liFoot3 = newElem('li');
+  liFoot3.classList.add('border100');
+  const iFoot3 = newElem('i');
+  iFoot3.classList.add('fab', 'fa-github');
+  liFoot3.append(iFoot3);
+
+  footUl.append(liFoot1, liFoot2, liFoot3);
+  anchorFoot.append(footUl);
+
+  anchor.append(main, anchorFoot);
 
   addGame();
   refresh();
