@@ -4,7 +4,7 @@ const addGame = async () => {
   if (localStorage.getItem('gameId'));
 
   const newGame = {
-    name: 'footie with the boys',
+    name: '666',
   };
 
   const response = await fetch(`${baseUrl}games/`, {
@@ -28,6 +28,7 @@ const refresh = async () => {
   scores.result.forEach((score) => {
     const listItem = document.createElement('li');
     listItem.innerText = `${score.user}: ${score.score}`;
+    listItem.classList.add('bg-orange');
     list.appendChild(listItem);
   });
 };

@@ -9,13 +9,13 @@ const newDiv = () => document.createElement('div');
 
 const render = () => {
   const anchor = document.getElementById('anchor');
-
+  
   const main = newElem('main');
   main.classList.add('content-sa', 'flex', 'flex-col');
 
   const title = newElem('h1');
   title.innerText = 'Leader Board';
-  title.classList.add('center', 'm-bot-1');
+  title.classList.add('top-left', 'm-bot-1', 'txt-db');
 
   const divMain = newDiv();
   divMain.classList.add('content-sa', 'flex');
@@ -27,23 +27,24 @@ const render = () => {
   logTitle.classList.add('flex', 'content-sa', 'm-bot-1');
 
   const subHead = newElem('h2');
+  subHead.classList.add('txt-db');
   subHead.innerText = 'Recent Scores';
 
   const refBut = newElem('button');
   refBut.id = 'refresh-but';
   refBut.innerText = 'Refresh';
-  refBut.classList.add('refresh');
+  refBut.classList.add('refresh', 'bg-green');
 
   const list = newElem('ul');
   list.id = 'JS-score-log';
-  list.classList.add('log-board', 'border', 'list-style', 'm-left');
+  list.classList.add('log-board', 'pad-top', 'border', 'list-style', 'm-left', 'bg-green');
 
   const rightDiv = newDiv();
   rightDiv.classList.add('input-field', 'w-37');
 
   const subHead2 = newElem('h2');
   subHead2.innerText = 'Add Your Score';
-  subHead2.classList.add('m-bot-1');
+  subHead2.classList.add('m-bot-1', 'txt-db');
 
   const form = newElem('form');
 
@@ -63,7 +64,7 @@ const render = () => {
   subBut.id = 'submit-but';
   subBut.type = 'submit';
   subBut.innerText = 'Submit';
-  subBut.classList.add('f-right');
+  subBut.classList.add('f-right', 'bg-green');
 
   form.append(userInput, userScore, subBut);
   rightDiv.append(subHead2, form);
@@ -72,6 +73,18 @@ const render = () => {
   divMain.append(divLeft, rightDiv);
   main.append(title, divMain);
   anchor.append(main);
+
+  const anchorFoot = document.getElementById('anchor-foot');
+  anchorFoot.classList.add('flex', 'center', 'vh-10');
+
+  const footUl = newElem('ul');
+  footUl.classList.add('flex', 'justify-content: space-around;');
+
+  const liFoot1 = newElem('li');
+  liFoot1.classList.add('');
+
+  footUl.append();
+  anchorFoot.append();
 
   addGame();
   refresh();
