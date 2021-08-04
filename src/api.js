@@ -15,7 +15,7 @@ const addGame = async () => {
     body: JSON.stringify(newGame),
   });
   const data = await response.json();
-  const gameId = data.result.split(' ')[3];
+  const gameId = data.result.split(' ')[5];
   localStorage.setItem('gameId', gameId);
 };
 
