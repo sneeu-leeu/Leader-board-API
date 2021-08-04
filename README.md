@@ -5,6 +5,9 @@
 > This is an interactive web app to keep track of games and scores achieved in those games using Scoreboard API
 
 
+![screenshot](./img/scree-shot.png)
+
+
 ## Built With
 
 - JavaScript
@@ -13,7 +16,7 @@
 
 ## Live Demo
 
-We are currently building, but you are more than welcome to see our progress [here](https://focused-leavitt-f1ea1d.netlify.app/)
+We are currently building, but you are more than welcome to see our progress [here](https://elated-mcclintock-6cffff.netlify.app/)
 
 ### Setup
 
