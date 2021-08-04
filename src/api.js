@@ -1,4 +1,4 @@
-const baseUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/VyTaWpRFIo6Fe7f1dEgS/games/';
+const baseUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
 
 const addGame = async () => {
   if (localStorage.getItem('gameId'));
