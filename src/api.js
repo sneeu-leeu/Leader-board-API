@@ -1,10 +1,10 @@
-const baseUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
+const baseUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/VyTaWpRFIo6Fe7f1dEgS/games/';
 
 const addGame = async () => {
   if (localStorage.getItem('gameId'));
 
   const newGame = {
-    name: 'Great Game',
+    name: 'footie with the boys',
   };
 
   const response = await fetch(`${baseUrl}games/`, {
