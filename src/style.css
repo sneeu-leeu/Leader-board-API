@@ -6,6 +6,10 @@
   flex-direction: column;
 }
 
+.list-style {
+  list-style: none;
+}
+
 .w-97 {
   width: 97%;
 }
