@@ -31,3 +31,26 @@ const refresh = async () => {
     listItem.append(list);
   });
 };
+
+const submit = async (e) => {
+  e.preventDefault();
+
+  const gameId = localStorage.getItem('gameId');
+  const playerName = document.getElementById('playerName');
+  const playerScore = document.getElementById('playerScore');
+
+  const newScore = {
+    user: playerName.value,
+    score: playerScore.value,
+  };
+
+  await fetch(`${apiUrl}games/${gameId}/scores`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(newScore),
+  });
+  playerName.value = '';
+  playerScore.value = '';
+};
