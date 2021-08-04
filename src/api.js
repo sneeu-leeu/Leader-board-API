@@ -54,3 +54,5 @@ const submit = async (e) => {
   playerName.value = '';
   playerScore.value = '';
 };
+
+module.exports = { addGame, refresh, submit };
