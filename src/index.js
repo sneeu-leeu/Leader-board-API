@@ -15,7 +15,7 @@ const render = () => {
 
   const title = newElem('h1');
   title.innerText = 'Leader Board';
-  title.classList.add('center', 'm-bot-1');
+  title.classList.add('top-left', 'm-bot-1', 'txt-db');
 
   const divMain = newDiv();
   divMain.classList.add('content-sa', 'flex');
@@ -27,23 +27,24 @@ const render = () => {
   logTitle.classList.add('flex', 'content-sa', 'm-bot-1');
 
   const subHead = newElem('h2');
+  subHead.classList.add('txt-db');
   subHead.innerText = 'Recent Scores';
 
   const refBut = newElem('button');
   refBut.id = 'refresh-but';
   refBut.innerText = 'Refresh';
-  refBut.classList.add('refresh');
+  refBut.classList.add('refresh', 'bg-green');
 
   const list = newElem('ul');
   list.id = 'JS-score-log';
-  list.classList.add('log-board', 'border', 'list-style', 'm-left');
+  list.classList.add('m-bot-1', 'log-board', 'pad-top', 'border', 'list-style', 'm-left', 'bg-green');
 
   const rightDiv = newDiv();
   rightDiv.classList.add('input-field', 'w-37');
 
   const subHead2 = newElem('h2');
   subHead2.innerText = 'Add Your Score';
-  subHead2.classList.add('m-bot-1');
+  subHead2.classList.add('m-bot-1', 'txt-db');
 
   const form = newElem('form');
 
@@ -63,7 +64,7 @@ const render = () => {
   subBut.id = 'submit-but';
   subBut.type = 'submit';
   subBut.innerText = 'Submit';
-  subBut.classList.add('f-right');
+  subBut.classList.add('f-right', 'bg-green');
 
   form.append(userInput, userScore, subBut);
   rightDiv.append(subHead2, form);
@@ -71,7 +72,35 @@ const render = () => {
   divLeft.append(logTitle, list);
   divMain.append(divLeft, rightDiv);
   main.append(title, divMain);
-  anchor.append(main);
+
+  const anchorFoot = newElem('footer');
+  anchorFoot.classList.add('flex', 'center', 'vh-10', 'bg-db');
+
+  const footUl = newElem('ul');
+  footUl.classList.add('m-top-1', 'flex', 'w-50', 'content-sa');
+
+  const liFoot1 = newElem('li');
+  liFoot1.classList.add('border100');
+  const iFoot1 = newElem('i');
+  iFoot1.classList.add('fab', 'fa-discord');
+  liFoot1.append(iFoot1);
+
+  const liFoot2 = newElem('li');
+  liFoot2.classList.add('border100');
+  const iFoot2 = newElem('i');
+  iFoot2.classList.add('fas', 'fa-share-alt');
+  liFoot2.append(iFoot2);
+
+  const liFoot3 = newElem('li');
+  liFoot3.classList.add('border100');
+  const iFoot3 = newElem('i');
+  iFoot3.classList.add('fab', 'fa-github');
+  liFoot3.append(iFoot3);
+
+  footUl.append(liFoot1, liFoot2, liFoot3);
+  anchorFoot.append(footUl);
+
+  anchor.append(main, anchorFoot);
 
   addGame();
   refresh();

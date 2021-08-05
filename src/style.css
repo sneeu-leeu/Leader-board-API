@@ -1,8 +1,40 @@
-
-li {
+.score-log li {
   border: 1px solid black;
   margin-bottom: 5px;
   padding: 3px;
+}
+
+body {
+  background-color: rgb(91, 208, 255);
+}
+
+h1 {
+  font-size: 2.6rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+i {
+  font-size: 1.3rem;
+  padding: 5px;
+}
+
+.txt-db {
+  color: darkblue;
+}
+
+.bg-db {
+  background-color: darkblue;
+}
+
+.vh-10 {
+  height: 20vh;
+}
+
+.pad-top {
+  padding-top: 5px;
 }
 
 .flex {
@@ -25,8 +57,27 @@ li {
   width: 40%;
 }
 
+.w-50 {
+  width: 50%;
+}
+
 .w-37 {
   width: 37%;
+}
+
+.border100 {
+  border: 1px solid black;
+  border-radius: 100%;
+  background-color: rgb(91, 208, 255);
+  padding: 4px;
+}
+
+.bg-orange {
+  background-color: rgb(108, 255, 64);
+}
+
+.bg-green {
+  background-color: rgb(255, 145, 0);
 }
 
 .f-right {
@@ -41,8 +92,8 @@ li {
   margin-top: 1rem;
 }
 
-.center {
-  align-self: center;
+.top-left {
+  margin: 3rem 4.6rem;
 }
 
 .m-left {
@@ -63,15 +114,12 @@ li {
   justify-content: space-around;
 }
 
-h1 {
-  font-size: 2.6rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
 .refresh {
   height: 1.6em;
   margin-top: 0.5rem;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
 }
